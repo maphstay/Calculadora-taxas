@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.maskMoney.min.js" type="text/javascript"></script>
+    <script src="function.js" type="text/javascript"></script>
+    <script>
+      /*$(function() {
+        $('#currency1').maskMoney();
+        $('#currency2').maskMoney();
+        $('#currency').maskMoney();
+      })*/
+    </script>
+</head>
+<body>
+  <div id="pri">
+    <div id="pri1">
+        <h2 id="titulo">Valor da Venda</h2>
+        <input type="text" id="currency1" data-affixes-stay="true" data-prefix="R$ " data-thousands="." data-decimal="," placeholder="R$ 0,00" autocomplete="off" maxlength="8" oninput="calc()"/>
+        <p>
+        <label for="" >
+          <select id="formapgto" autocomplete="off" onchange="calc()">
+            <option value="cp">Crédito parcelado</option>
+            <option value="ca">Crédito à vista</option>
+            <option value="db">Débito</option>
+          </select>
+        </label>
+          <a id="nparc">Parcelas:</a>
+          <label for="" id="lparc">
+          <select id="parc" autocomplete="off" oninput="parc()" onchange="calc()">
+            <option selected value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+            <option value="11">11x</option>
+            <option value="12">12x</option>
+          </select>
+        </label>
+        </p>
+      </div>
+      <p id="par2"><h2>Valor Cobrado</h2></p>
+      <div id="sec">
+        <a id="calc1">
+        <input type="text" id="currency2" data-affixes-stay="true" data-prefix="R$ " data-thousands="." data-decimal="," placeholder="R$ 0,00" autocomplete="off" disabled/>
+        -
+        <input type="text" id="parc2" value="1x" disabled autocomplete="off"></a>
+        <input type="text" id="currency3" data-affixes-stay="true" data-prefix="R$ " data-thousands="." data-decimal="," placeholder="R$ 0,00" autocomplete="off" disabled/>
+      </div>
+    </div>  
+</body>
+</html>
