@@ -10,24 +10,28 @@ function calc () {
         if (fpgmto == "db") {
             document.getElementById('nparc').textContent = "";
             document.getElementById('lparc').style = "display: none";
-            document.getElementById('calc1').style = "display: none";
+            document.getElementById('parc2').style = "display: none";
+            document.getElementById('currency2').style = "display: none";
             document.getElementById('currency3').style = "text-align: center";
             let val1 = Number(document.getElementById('currency1').value);
             let res = val1 + (val1*0.0203);
             document.getElementById('currency3').value = res.toFixed(2)
         } else if (fpgmto == "ca") {
-            document.getElementById('nparc').textContent = "Parcelas:";
-            document.getElementById('lparc').style = "display: ruby";
-            document.getElementById('calc1').style = "display: ruby";
-            document.getElementById('currency3').style = "text-align: left";
-            document.getElementById('parc').setAttribute("disabled", "disabled");
+            document.getElementById('nparc').textContent = "";
+            document.getElementById('lparc').style = "display: none";
+            document.getElementById('currency2').style = "display: none";
+            document.getElementById('parc2').style = "display: none";
+            document.getElementById('currency3').style = "text-align: center";
             let val1 = Number(document.getElementById('currency1').value);
             let res = val1 + (val1*0.0498);
             document.getElementById('currency3').value = res.toFixed(2)
         } else if (fpgmto == "cp"){
+            document.getElementById('parc2').style = "display: ruby";
+            document.getElementById('currency2').style = "display: ruby";
             document.getElementById('nparc').textContent = "Parcelas:";
             document.getElementById('lparc').style = "display: ruby";
-            document.getElementById('parc').removeAttribute("disabled", null)
+            document.getElementById('calc1').style = "display: ruby";
+            document.getElementById('currency3').style = "text-align: left";
             let val1 = Number(document.getElementById('currency1').value);
             let parcela = Number(document.getElementById('parc').value);
             let juros = parcela;
