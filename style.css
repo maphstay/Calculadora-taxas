@@ -18,6 +18,9 @@ a {
     color: rgb(245, 241, 235);
     font-size: 15pt;
     font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
 }
 
 h2 {
@@ -41,7 +44,7 @@ div#pri {
     position: relative;
     justify-content: center;
     margin-top: 50px;
-    padding: 50px;
+    padding: 5px;
     border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
